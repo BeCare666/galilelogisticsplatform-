@@ -31,7 +31,7 @@ body {
   background-repeat: no-repeat;
   background-color: #333 !important;
   animation: bgSlideshow 18s infinite;
-   background-image: url('../img/cargo.avif') ;
+   background-image: url('../img/logistic-la-gi-vai-tro-logistic.jpg') ;
    overflow: hidden;
 }
 body::before {
@@ -69,16 +69,7 @@ body::before {
   66.66% {
     opacity: 1;
   }
-  66.67% {
-    background-image: url('../img/logistic-la-gi-vai-tro-logistic.jpg');
-    transform: scale(1);
-  }
-  96% {
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 1;
-  }
+  
 }
 
 
@@ -1025,7 +1016,7 @@ a {
 @media(max-width:736px){
 	 #turnLogo img{
     position: fixed;
-    bottom: 30px;
+    bottom: 50px;
     right: 50%;
     left: 43%;
 }
