@@ -1025,7 +1025,7 @@ a {
 @media(max-width:736px){
 	 #turnLogo img{
     position: fixed;
-    bottom: 10px;
+    bottom: 30px;
     right: 50%;
     left: 43%;
 }
