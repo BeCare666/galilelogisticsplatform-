@@ -69,7 +69,16 @@ body::before {
   66.66% {
     opacity: 1;
   }
-  
+ /* 66.67% {
+    background-image: url('../img/logistic-la-gi-vai-tro-logistic.jpg');
+    transform: scale(1);
+  }
+  96% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+  }*/
 }
 
 
@@ -1017,6 +1026,15 @@ a {
 	 #turnLogo img{
     position: fixed;
     bottom: 50px;
+    right: 50%;
+    left: 43%;
+}
+}
+
+@media(max-width:636px){
+	 #turnLogo img{
+    position: fixed;
+    bottom: 80px;
     right: 50%;
     left: 43%;
 }
