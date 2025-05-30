@@ -49,7 +49,7 @@ body::before {
 }
 @keyframes bgSlideshow {
   0% {
-    background-image: url('../img/meeting.avif');
+    background-image: url('../img/black_meeting.avif');
     transform: scale(1);
     opacity: 1;
   }
@@ -60,7 +60,7 @@ body::before {
     opacity: 1;
   }
   33.34% {
-    background-image: url('../img/two.webp');
+    background-image: url('../img/two_black.jpg');
     transform: scale(1);
   }
   63% {
