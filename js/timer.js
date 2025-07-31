@@ -65,3 +65,20 @@ $(function () {
 
     timer();
 });
+
+// Gestion du modal
+const modal = document.querySelector('.modal');
+const openButton = document.getElementById('open-modal');
+const closeButton = document.querySelector('.icon-button');
+const declineButton = document.querySelector('.button.is-primary');
+
+openButton.addEventListener('click', () => {
+    modal.style.display = 'flex';
+});
+
+function closeModal() {
+    modal.style.display = 'none';
+}
+
+closeButton.addEventListener('click', closeModal);
+declineButton.addEventListener('click', closeModal);
