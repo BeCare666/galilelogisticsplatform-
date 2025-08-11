@@ -14,6 +14,10 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
 		crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<script src="https://unpkg.com/i18next@23.4.6/dist/umd/i18next.min.js"></script>
+	<script
+		src="https://unpkg.com/i18next-browser-languagedetector@7.0.1/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+	<script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
 
 	<script src="js/jquery.min.js"></script>
 	<style>
@@ -33,17 +37,17 @@
 				<div class="w3l-dot">
 					<div class="w3-heading">
 						<h1 style="display: flex; font-size: 23px; color: white;">Galilelogisticsplatform.com</h1>
-						<h4>Votre solution logistique tout en un.</h4>
+						<h4 id="INDEXID1"></h4>
 						<h5></h5>
 					</div>
 				</div>
 				<!--newsletter-->
 				<div class="newsletter">
-					<h2>Restez connectés</h2>
-					<div class="form">
+					<h2 id="INDEXID2"></h2>
+					<div class=" form">
 						<button class="sendEmail" style="cursor: pointer;"><a
-								href="mailto:ceo@galilelogisticsplatform.com">Envoyer un mail</a></button>
-						<button class="seeMessage" id="open-modal">Message du PDG </button>
+								href="mailto:ceo@galilelogisticsplatform.com" id="INDEXID3"> </a></button>
+						<button class="seeMessage" id="open-modal"> </button>
 
 					</div>
 				</div>
@@ -52,34 +56,35 @@
 
 				<!---728x90--->
 			</div>
-			<div class="w3ls-left">
+			<div class=" w3ls-left">
 				<div class="w3ls-dot">
 					<div class="w3-title">
-						<h4 style="font-size: 18px; color: white; font-weight: bold;">Rendez-vous le 30 octobre 2025
+						<h4 style="font-size: 18px; color: white; font-weight: bold;" id="INDEXID5">
+
 						</h4>
 
 					</div>
 					<!--timer-->
-					<div class="agileits-timer">
+					<div class=" agileits-timer">
 						<div class="clock">
 							<div class="column days">
 								<div class="timer" id="days"></div>
-								<div class="text">Jours</div>
+								<div class="text" id="INDEXID6">Jours</div>
 							</div>
 							<div class="timer days"></div>
 							<div class="column">
 								<div class="timer" id="hours"></div>
-								<div class="text">Heures</div>
+								<div class="text" id="INDEXID7">Heures</div>
 							</div>
 							<div class="timer"></div>
 							<div class="column">
 								<div class="timer" id="minutes"></div>
-								<div class="text">Minutes</div>
+								<div class="text" id="INDEXID8">Minutes</div>
 							</div>
 							<div class="timer"></div>
 							<div class="column">
 								<div class="timer" id="seconds"></div>
-								<div class="text">Sécondes</div>
+								<div class="text" id="INDEXID9">Sécondes</div>
 							</div>
 							<div class="clear"> </div>
 						</div>
@@ -124,13 +129,19 @@
 										</svg>
 									</a>
 								</li>
+								<li id="openLangModalBtn">
+									<a target="_blank" aria-label="TikTok" style="border-radius: 0% !important;">
+										<img id="currentFlag" src="https://flagcdn.com/w40/fr.png" alt="FR" width="24"
+											height="24" style="vertical-align: middle;">
+									</a>
+								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-         
-		</div>                  
+
+		</div>
 	</div>
 	<div class="bubbles">
 		<div class="bubble" style="width: 20px; height: 20px; left: 10%; animation-duration: 6s;"></div>
@@ -174,7 +185,10 @@
 						<path fill="currentColor"
 							d="M14 9V4H5v16h6.056c.328.417.724.785 1.18 1.085l1.39.915H3.993A.993.993 0 0 1 3 21.008V2.992C3 2.455 3.449 2 4.002 2h10.995L21 8v1h-7zm-2 2h9v5.949c0 .99-.501 1.916-1.336 2.465L16.5 21.498l-3.164-2.084A2.953 2.953 0 0 1 12 16.95V11zm2 5.949c0 .316.162.614.436.795l2.064 1.36 2.064-1.36a.954.954 0 0 0 .436-.795V13h-5v3.949z" />
 					</svg>
-					Message Du PDG
+					<p id="INDEXID10">
+
+					</p>
+
 				</h1>
 				<button class="icon-button">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -189,17 +203,271 @@
 					<img src="img/Image6.webp" alt="">
 
 				</div>
-				<h2>
+				<div id="INDEXID11">
+
+				</div>
+
+				<div>
+					<img src="img/Le_PDG.jpg" alt="">
+				</div>
+				<div id="president_info">
+					<div class="president-info"
+						style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+						<div style="display: flex; align-items: center; gap: 8px;">
+							<svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									d="M12 12c2.7 0 8 1.34 8 4v2H4v-2c0-2.66 5.3-4 8-4zm0-2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
+							</svg>
+							<span id="INDEXID12">
+								<strong>Nom & Prénoms :</strong>
+								<p style="font-size: 13px; margin-top: 13px;">Raoul Patrick NOUGOUM</p>
+							</span>
+						</div>
+						<div style="display: flex; align-items: center; gap: 8px;">
+							<svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20v-9.99l8 7.99 8-7.99V20H4z" />
+							</svg>
+							<span><strong>Email :</strong>
+								<p style="font-size: 13px; margin-top: 13px;">ceo@galilelogisticsplatform.com
+								</p>
+							</span>
+						</div>
+						<div style="display: flex; align-items: center; gap: 8px;">
+							<svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.35.27 2.67.76 3.88a1 1 0 0 1-.21 1.11l-2.2 2.2z" />
+							</svg>
+							<span>
+								<span id="INDEXID13">
+									<strong>Téléphone :</strong>
+									<p style="font-size: 13px; margin-top: 13px;">+237 96 34 5849 99</p>
+								</span>
+
+							</span>
+						</div>
+						<div style="display: flex; align-items: center; gap: 8px;">
+							<svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
+							</svg>
+							<span id="INDEXID14"><strong>Adresse :</strong>
+								<p style="font-size: 13px; margin-top: 13px;">Douala, Cameroun</p>
+							</span>
+						</div>
+						<div style="background-color: #051e2cf3 !important; margin: 10px; border-radius: 5px;"
+							id="INDEXID15">
+							<p style="text-align: center !important; font-weight: bold; 
+							font-family: 'Dancing', cursive, monospace !important;">
+								PDG de Galile Logistics International Group
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<footer class="modal-container-footer" id="INDEXID16">
+				<button class="button is-ghostx" style="display: none;">Decline</button>
+				<button class="button is-primary">Fermer</button>
+			</footer>
+		</article>
+	</div>
+	<div id="preloader" style="display: none;">
+		<!--<img src="img/preloader.gif" alt="">-->
+	</div>
+	<!-- pre loader area start -->
+	<div id="turnLogo">
+		<img id="turnLogoPhoto" src="img/Image1galile1.png" alt=""
+			style="width: 10vh;height: 10vh; border-radius: 100%;">
+	</div>
+
+	<!-- Modal langue -->
+	<div id="langModal" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+">
+		<div style="
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    position: relative;
+  ">
+			<button id="closeLangModalBtn" style="
+      position: absolute; top: 10px; right: 10px;
+      border: none; background: transparent;
+      font-size: 20px; cursor: pointer;
+    ">&times;</button>
+			<div class="langOption" data-lang="fr"
+				style="cursor:pointer; display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 5px; transition: background 0.3s;">
+				<img src="https://flagcdn.com/w40/fr.png" alt="Français" width="32">
+
+			</div>
+			<div class="langOption" data-lang="en"
+				style="cursor:pointer; display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 5px; transition: background 0.3s;">
+				<img src="https://flagcdn.com/w40/gb.png" alt="English" width="32">
+
+			</div>
+		</div>
+	</div>
+	<div id="loading">
+		<div id="loading-center">
+			<div id="loading-center-absolute">
+				<!-- loading content here -->
+				<div class="preloader__content text-center">
+					<div class="preloader__logo">
+						<img src="img/logo2.webp" alt="" id="logod">
+						<div class="loader">
+							<div id="ld4" style="margin-top: 54px !important;">
+								<div>
+								</div>
+								<div>
+								</div>
+								<div>
+								</div>
+								<div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="st-loading-bar" class="preloader__bar">
+						<strong>Coming Soon...</strong>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- pre loader area end -->
+	<script>
+		const resources = {
+			en: {
+				translation: {
+					"INDEXID1": "Your all-in-one logistics solution.",
+					"INDEXID2": "Stay connected",
+					"INDEXID3": "Send an email",
+					"open-modal": "Message from the CEO",
+					"INDEXID5": "See you on October 30, 2025",
+					"INDEXID6": "Days",
+					"INDEXID7": "Hours",
+					"INDEXID8": "Minutes",
+					"INDEXID9": "Seconds",
+					"INDEXID10": "Message from the CEO",
+					"INDEXID11": `
+      <h2>
+        IMPORT, EXPORT, SHIP, COMPLETE YOUR CUSTOMS FORMALITIES WITH A FEW CLICKS ON GALILELOGISTICSPLATFORM.COM
+      </h2>
+      <p>
+        The global supply process can be complicated. However, galilelogisticsplatform.com offers you tools to import, export, ship, and complete your customs formalities with just a few clicks.
+      </p>
+      <p>
+        Galilelogisticsplatform.com uses sourcing and supply chain to strengthen and simplify cross-border trade in Africa and worldwide.
+      </p>
+      <p>
+        Galilelogisticsplatform.com is a transformative solution for effective management of African and global supply.
+      </p>
+      <p>
+        AfCFTA is the largest free trade agreement in the world by number of participants. Its ambition is to make Africa a modern, industrialized, united, and influential player on the global stage.
+      </p>
+      <p>
+        According to AfCFTA tariff conditions, member states must initially eliminate tariffs on 90% of goods, then guarantee free access to at least 97% of products and services across the African continent.
+      </p>
+      <p>
+        What are the rules of origin of AfCFTA? What are AfCFTA’s legal instruments? How to use AfCFTA’s rules of origin? How to find AfCFTA tariffs and how to obtain an AfCFTA certificate of origin?
+      </p>
+      <p>
+        Galilelogisticsplatform.com answers all these questions and provides solutions tailored to the needs of its clients and partners.
+      </p>
+      As a trade pact, AfCFTA's goals are:<br>
+      - Eliminate trade barriers between member countries to allow companies to trade more easily in Africa and benefit from their expanding market;<br>
+      - Introduce regulatory measures such as sanitary standards and removal of non-tariff trade barriers;<br>
+      - Establish a liberalized market for goods and services;<br>
+      - Facilitate capital flows;<br>
+      - Facilitate investments by creating a significant market;<br>
+      - Drive the introduction of new technologies to boost productivity;<br>
+      - Increase competitiveness of member economies;<br>
+      - Promote industrial development through diversification and develop value-added systems for products;<br>
+      - Establish a continental common market.
+      </p>
+      <p>
+        Galilelogisticsplatform.com supports you at every stage of AfCFTA processes and global supply.
+      </p>
+      <p>
+        See you on October 30, 2025, for the official launch of Galilelogisticsplatform.com.
+      </p>
+
+      <div style="display: none !important;">
+        <p>Import, export, ship, complete your customs formalities with a few clicks on <a href="https://galilelogisticsplatform.com">galilelogisticsplatform.com</a></p>
+        <p>
+          The global supply process can be complicated. However, <a href="https://galilelogisticsplatform.com">galilelogisticsplatform.com</a> offers companies tools to import, export, ship and complete customs formalities quickly. Galilelogisticsplatform.com uses sourcing and supply chain to strengthen and simplify cross-border trade in Africa and worldwide.
+        </p>
+        <p>Galilelogisticsplatform.com: A transformative solution for effective management of African and global supply.</p>
+        <p>
+          AfCFTA is the largest free trade agreement in the world in terms of participants, aiming to make Africa a modern, industrialized, united, and influential player on the global stage. According to AfCFTA tariff conditions, member states must initially remove tariffs on 90% of goods to eventually guarantee free access to at least 97% of products and most services across Africa.
+        </p>
+        <p>
+          What are AfCFTA’s rules of origin? What are AfCFTA’s legal instruments? How to use AfCFTA’s rules of origin? How to find AfCFTA tariffs and how to obtain an AfCFTA certificate of origin?
+          Galilelogisticsplatform.com addresses all these concerns and offers solutions adapted to client needs.
+        </p>
+        <p>As a trade pact, AfCFTA’s objectives are:
+          <ul>
+            <li>Eliminate trade barriers between member countries, to allow companies to trade more easily in Africa and benefit from their expanding market;</li>
+            <li>Introduce regulatory measures such as sanitary standards and elimination of non-tariff trade barriers;</li>
+            <li>Establish a liberalized market for goods and services;</li>
+            <li>Facilitate capital flows;</li>
+            <li>Facilitate investments by creating a significant market;</li>
+            <li>Drive the introduction of new technologies to boost productivity;</li>
+            <li>Increase competitiveness of member economies;</li>
+            <li>Promote industrial development through diversification and develop value-added systems for products;</li>
+            <li>Establish, in the future, a continental common market.</li>
+          </ul>
+        </p>
+        <p>
+          Galilelogisticsplatform.com supports you at every stage of AfCFTA and global supply processes.
+        </p>
+      </div>
+    `,
+					"INDEXID12": "<strong>Name & Surname:</strong><p style=\"font-size: 13px; margin-top: 13px;\">Raoul Patrick NOUGOUM</p>",
+					"INDEXID13": "<strong>Phone:</strong><p style=\"font-size: 13px; margin-top: 13px;\">+237 696 345 849</p>",
+					"INDEXID14": "<strong>Address:</strong><p style=\"font-size: 13px; margin-top: 13px;\">Douala, Cameroon</p>",
+					"INDEXID15": "<p style=\"text-align: center !important; font-weight: bold; font-family: 'Dancing', cursive, monospace !important;\">CEO of Galilé Logistics International Group</p>",
+					"INDEXID16": "<button class=\"button is-ghostx\" style=\"display: none;\">Decline</button><button class=\"button is-primary\">Close</button>",
+					"st-loading-bar": "<strong>Coming Soon...</strong>"
+				}
+
+
+			},
+			fr: {
+				translation: {
+					"INDEXID1": `Votre solution logistique tout en un.`,
+					"INDEXID2": `Restez connectés`,
+					"INDEXID3": `Envoyez un mail`,
+					"open-modal": `Message du PDG`,
+					"INDEXID5": `Rendez-vous le 30 octobre 2025`,
+					"INDEXID6": `Jours`,
+					"INDEXID7": `Heures`,
+					"INDEXID8": `Minutes`,
+					"INDEXID9": `Sécondes`,
+					"INDEXID10": `Message Du PDG`,
+					"INDEXID11": `	
+					<h2>
 					IMPORTEZ, EXPORTEZ, EXPÉDIEZ, RÉALISEZ VOS FORMALITÉS DOUANIÈRES EN QUELQUES CLICS SUR
 					GALILELOGISTICSPLATFORM.COM</h2>
 				<p>
 					Le processus d’approvisionnement mondial peut s’avérer compliqué. Cependant,
 					galilelogisticsplatform.com
-					vous offre des outils pour importer, exporter, expédier et réaliser vos formalités douanières en
+					vous offre des outils pour importer, exporter, expédier et réaliser vos formalités
+					douanières en
 					quelques clics.
 				</p>
 				<p>
-					Galilelogisticsplatform.com utilise le sourcing et la supply chain pour renforcer et simplifier le
+					Galilelogisticsplatform.com utilise le sourcing et la supply chain pour renforcer et
+					simplifier le
 					commerce transfrontalier en Afrique et dans le monde.
 				</p>
 				<p>
@@ -207,22 +475,28 @@
 					l’approvisionnement africain et mondial.
 				</p>
 				<p>
-					La ZLECAf est l’accord de libre-échange le plus important au monde en termes de participants.
+					La ZLECAf est l’accord de libre-échange le plus important au monde en termes de
+					participants.
 					L’ambition
-					de la ZLECAf est de faire de l’Afrique un acteur moderne, industrialisé, solidaire et influent sur
+					de la ZLECAf est de faire de l’Afrique un acteur moderne, industrialisé, solidaire et
+					influent sur
 					la
 					scène mondiale.
 				</p>
 				<p>
-					Conformément aux conditions tarifaires de la ZLECAf, les États membres doivent initialement éliminer
+					Conformément aux conditions tarifaires de la ZLECAf, les États membres doivent initialement
+					éliminer
 					les
-					droits de douane sur 90 % des marchandises, pour ensuite garantir un accès libre à au moins 97 % des
+					droits de douane sur 90 % des marchandises, pour ensuite garantir un accès libre à au moins
+					97 % des
 					produits et services sur le continent africain.
 				</p>
 				<p>
-					Quelles sont les règles d’origine de la ZLECAf ? Quels sont les instruments juridiques de la ZLECAf
+					Quelles sont les règles d’origine de la ZLECAf ? Quels sont les instruments juridiques de la
+					ZLECAf
 					?
-					Comment utiliser les RO de la ZLECAf ? Comment trouver les tarifs de la ZLECAf et comment obtient-on
+					Comment utiliser les RO de la ZLECAf ? Comment trouver les tarifs de la ZLECAf et comment
+					obtient-on
 					un
 					certificat d’origine de la ZLECAf ?
 				</p>
@@ -231,7 +505,8 @@
 				</p>
 				En tant que pacte commercial, les objectifs de la ZLECAf sont les suivants : br
 
-				- Éliminer les barrières commerciales entre les pays membres, afin de permettre aux entreprises de
+				- Éliminer les barrières commerciales entre les pays membres, afin de permettre aux entreprises
+				de
 				commercer plus facilement en Afrique et de bénéficier de leur propre marché en expansion ; <br>
 
 				- Introduire des mesures réglementaires telles que des normes sanitaires et l’élimination des
@@ -281,7 +556,8 @@
 
 					<!--<h2>Le rapport « Future of Commerce : Outlook for 2024 » publié par TechCabal Insights</h2>-->
 
-					<p>La ZLECAf est l’accord de libre-échange le plus important au monde en termes de participants,
+					<p>La ZLECAf est l’accord de libre-échange le plus important au monde en termes de
+						participants,
 						dont l’ambition est de faire de l’Afrique un acteur moderne, industrialisé, solidaire et
 						influent
 						sur la scène mondiale. Conformément aux conditions tarifaires de la ZLECAf, les États
@@ -293,13 +569,16 @@
 
 					<!--<h3>Le Rôle objectif de Galilé E-commerce</h3>-->
 
-					<p>Quelles sont les règles d’origine de la ZLECAf ? Quels sont les instruments juridiques de la
+					<p>Quelles sont les règles d’origine de la ZLECAf ? Quels sont les instruments juridiques de
+						la
 						ZLECAf ?
-						Comment utiliser les RO de la ZLECAf ? Comment trouver les tarifs de la ZLECAf et comment
+						Comment utiliser les RO de la ZLECAf ? Comment trouver les tarifs de la ZLECAf et
+						comment
 						obtient-on
 						un certificat d’origine de la ZLECAf ?
 
-						Galilelogisticsplatform.com répond à l’ensemble de ces préoccupations et offre des solutions
+						Galilelogisticsplatform.com répond à l’ensemble de ces préoccupations et offre des
+						solutions
 						adaptées aux besoins des clients.
 					</p>
 					<p>En tant que pacte commercial, les objectifs de la ZLECAf sont les suivants :
@@ -307,12 +586,14 @@
 						<li>
 							Éliminer les barrières commerciales entre les pays membres, afin de permettre aux
 							entreprises de
-							commercer plus facilement en Afrique et de bénéficier de leur propre marché en expansion
+							commercer plus facilement en Afrique et de bénéficier de leur propre marché en
+							expansion
 							;
 
 						</li>
 						<li>
-							Introduire des mesures réglementaires telles que des normes sanitaires et l’élimination
+							Introduire des mesures réglementaires telles que des normes sanitaires et
+							l’élimination
 							des
 							obstacles non tarifaires au commerce ;
 
@@ -348,112 +629,123 @@
 					</ul>
 					</p>
 					<p>
-						Galilelogisticsplatform.com vous accompagne à chaque étape des processus de la ZLECAf et de
+						Galilelogisticsplatform.com vous accompagne à chaque étape des processus de la ZLECAf et
+						de
 						l’approvisionnement mondial.
 					</p>
-				</div>
-				<div>
-					<img src="img/Le_PDG.jpg" alt="">
-				</div>
-				<div id="president_info">
-					<div class="president-info"
-						style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
-						<div style="display: flex; align-items: center; gap: 8px;">
-							<svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-								<path
-									d="M12 12c2.7 0 8 1.34 8 4v2H4v-2c0-2.66 5.3-4 8-4zm0-2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
-							</svg>
-							<span><strong>Nom & Prénoms :</strong>
-								<p style="font-size: 13px; margin-top: 13px;">Raoul Patrick NOUGOUM</p>
-							</span>
-						</div>
-						<div style="display: flex; align-items: center; gap: 8px;">
-							<svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-								<path
-									d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20v-9.99l8 7.99 8-7.99V20H4z" />
-							</svg>
-							<span><strong>Email :</strong>
-								<p style="font-size: 13px; margin-top: 13px;">ceo@galilelogisticsplatform.com</p>
-							</span>
-						</div>
-						<div style="display: flex; align-items: center; gap: 8px;">
-							<svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-								<path
-									d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.35.27 2.67.76 3.88a1 1 0 0 1-.21 1.11l-2.2 2.2z" />
-							</svg>
-							<span><strong>Téléphone :</strong>
-								<p style="font-size: 13px; margin-top: 13px;">+237 96 34 5849 99</p>
-							</span>
-						</div>
-						<div style="display: flex; align-items: center; gap: 8px;">
-							<svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-								<path
-									d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
-							</svg>
-							<span><strong>Adresse :</strong>
-								<p style="font-size: 13px; margin-top: 13px;">Douala, Cameroun</p>
-							</span>
-						</div>
-						<div style="background-color: #051e2cf3 !important; margin: 10px; border-radius: 5px;">
-							<p style="text-align: center !important; font-weight: bold; 
-					font-family: 'Dancing', cursive, monospace !important;">
-								PDG de Galile Logistics International Group
-							</p>
-						</div>
-					</div>
-				</div>
+				</div>				
+					 `,
+					"INDEXID12": `<strong>Nom & Prénoms :</strong>
+								<p style="font-size: 13px; margin-top: 13px;">Raoul Patrick NOUGOUM</p>`,
+					"INDEXID13": `<strong>Téléphone :</strong>
+								<p style="font-size: 13px; margin-top: 13px;">+237 696 345 849</p>`,
+					"INDEXID14": `<strong>Adresse :</strong>
+								<p style="font-size: 13px; margin-top: 13px;">Douala, Cameroun</p>`,
+					"INDEXID15": `<p style="text-align: center !important; font-weight: bold; 
+								font-family: 'Dancing', cursive, monospace !important;">
+								PDG de Galilé Logistics International Group
+							</p>`,
+					"INDEXID16": `<button class="button is-ghostx" style="display: none;">Decline</button>
+				<button class="button is-primary">Fermer</button>`,
 
-			</section>
-			<footer class="modal-container-footer">
-				<button class="button is-ghostx" style="display: none;">Decline</button>
-				<button class="button is-primary">Fermer</button>
-			</footer>
-		</article>
-	</div>
-	<div id="preloader" style="display: none;">
-		<!--<img src="img/preloader.gif" alt="">-->
-	</div>
-	<!-- pre loader area start -->
-	<div id="turnLogo">
-		<img id="turnLogoPhoto" src="img/Image1galile1.png" alt=""
-			style="width: 10vh;height: 10vh; border-radius: 100%;">
-	</div>
+					"st-loading-bar": `<strong>Coming Soon...</strong>`,
 
-	<div id="loading">
-		<div id="loading-center">
-			<div id="loading-center-absolute">
-				<!-- loading content here -->
-				<div class="preloader__content text-center">
-					<div class="preloader__logo">
-						<img src="img/logo2.webp" alt="" id="logod">
-						<div class="loader">
-							<div id="ld4" style="margin-top: 54px !important;">
-								<div>
-								</div>
-								<div>
-								</div>
-								<div>
-								</div>
-								<div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="st-loading-bar" class="preloader__bar">
-						<strong>Coming Soon...</strong>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- pre loader area end -->
-	<script>
+				}
+			}
+		};
+
+		// Init i18next
+		i18next
+			.use(i18nextBrowserLanguageDetector)
+			.init({
+				resources,
+				fallbackLng: "fr",
+				debug: false
+			}, function () {
+				updateContent();
+			});
+
+		// Fonction pour mettre à jour le contenu
+		function updateContent() {
+			document.getElementById("INDEXID1").innerHTML = i18next.t("INDEXID1");
+			document.getElementById("INDEXID2").innerHTML = i18next.t("INDEXID2");
+			document.getElementById("INDEXID3").innerHTML = i18next.t("INDEXID3");
+			document.getElementById("open-modal").innerHTML = i18next.t("open-modal");
+			document.getElementById("INDEXID5").innerHTML = i18next.t("INDEXID5");
+			document.getElementById("INDEXID6").innerHTML = i18next.t("INDEXID6");
+			document.getElementById("INDEXID7").innerHTML = i18next.t("INDEXID7");
+			document.getElementById("INDEXID8").innerHTML = i18next.t("INDEXID8");
+			document.getElementById("INDEXID9").innerHTML = i18next.t("INDEXID9");
+			document.getElementById("INDEXID10").innerHTML = i18next.t("INDEXID10");
+			document.getElementById("INDEXID11").innerHTML = i18next.t("INDEXID11");
+			document.getElementById("INDEXID12").innerHTML = i18next.t("INDEXID12");
+			document.getElementById("INDEXID13").innerHTML = i18next.t("INDEXID13");
+			document.getElementById("INDEXID14").innerHTML = i18next.t("INDEXID14");
+			document.getElementById("INDEXID15").innerHTML = i18next.t("INDEXID15");
+			document.getElementById("INDEXID16").innerHTML = i18next.t("INDEXID16");
+
+			document.getElementById("st-loading-bar").innerHTML = i18next.t("st-loading-bar");
+
+		}
+
+		// Ouvrir modal au clic
+		document.getElementById("openLangModalBtn").addEventListener("click", () => {
+			document.getElementById("langModal").style.display = "flex";
+		});
+
+		// Fermer modal au clic sur la croix
+		document.getElementById("closeLangModalBtn").addEventListener("click", () => {
+			document.getElementById("langModal").style.display = "none";
+		});
+
+		// Fermer modal si clic en dehors de la boite blanche
+		document.getElementById("langModal").addEventListener("click", (e) => {
+			if (e.target === document.getElementById("langModal")) {
+				document.getElementById("langModal").style.display = "none";
+			}
+		});
+
+		// Changement de langue
+		document.addEventListener("DOMContentLoaded", () => {
+			let savedLang = localStorage.getItem("selectedLang") || "fr"; // fr par défaut
+
+			const langFlags = {
+				fr: "https://flagcdn.com/w40/fr.png",
+				en: "https://flagcdn.com/w40/gb.png",
+			};
+
+			i18next.changeLanguage(savedLang, () => {
+				updateContent();
+				document.getElementById("currentFlag").src = langFlags[savedLang];
+			});
+		});
+
+		document.querySelectorAll(".langOption").forEach(option => {
+			option.addEventListener("click", function () {
+				let lang = this.getAttribute("data-lang");
+				let imgSrc = this.querySelector("img").src;
+
+				localStorage.setItem("selectedLang", lang);
+
+				i18next.changeLanguage(lang, () => {
+					updateContent();
+					document.getElementById("langModal").style.display = "none";
+				});
+
+				document.getElementById("currentFlag").src = imgSrc;
+			});
+		});
+
+
+
+
+
+
 		document.addEventListener("DOMContentLoaded", function () {
 			setTimeout(() => {
 				document.getElementById("loading").style.display = "none"
 			}, 7000);
 		});
-
 	</script>
 	<!--scripts-->
 	<script type="text/javascript" src=" js/moment.js"></script>
