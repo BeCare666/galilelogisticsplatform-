@@ -277,9 +277,9 @@
 	</div>
 	<!-- pre loader area start -->
 	<div id="turnLogo">
-		<img id="turnLogoPhoto" src="img/Image1galile1.png" alt=""
-			style="width: 10vh;height: 10vh; border-radius: 100%;">
+		<button>Actus galileecommerce</button>
 	</div>
+
 
 	<!-- Modal langue -->
 	<div id="langModal" style="
@@ -769,7 +769,9 @@
 		document.getElementById("openLangModalBtn").addEventListener("click", () => {
 			document.getElementById("langModal").style.display = "flex";
 		});
-
+		document.getElementById("turnLogo").addEventListener("click", () => {
+			window.location.href = "actualités.html";
+		});
 		// Fermer modal au clic sur la croix
 		document.getElementById("closeLangModalBtn").addEventListener("click", () => {
 			document.getElementById("langModal").style.display = "none";

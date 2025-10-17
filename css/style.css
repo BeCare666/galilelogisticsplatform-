@@ -1317,28 +1317,46 @@
    }
  }
 
- #turnLogo img {
+ #turnLogo {
    position: fixed;
-   bottom: 30px;
-   right: 50%;
+   bottom: 40px;
    left: 50%;
+   transform: translateX(-50%);
+   z-index: 9999;
+   /* pour rester au-dessus du contenu */
  }
 
- @media(max-width:736px) {
-   #turnLogo img {
-     position: fixed;
-     bottom: 50px;
-     right: 50%;
-     left: 43%;
+ #turnLogo button {
+   background: linear-gradient(90deg, #6366F1, #8B5CF6, #EC4899);
+   color: white;
+   font-weight: 600;
+   font-size: 1.1rem;
+   padding: 12px 28px;
+   border: none;
+   border-radius: 5px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   width: 100%;
+   max-width: 500px;
+   text-align: center;
+   white-space: nowrap;
+ }
+
+ #turnLogo button:hover {
+   transform: scale(1.05);
+   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+ }
+
+ @media (max-width: 736px) {
+   #turnLogo {
+     bottom: 60px;
    }
  }
 
- @media(max-width:636px) {
-   #turnLogo img {
-     position: fixed;
+ @media (max-width: 636px) {
+   #turnLogo {
      bottom: 80px;
-     right: 50%;
-     left: 43%;
    }
  }
 
